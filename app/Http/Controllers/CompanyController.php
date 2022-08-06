@@ -98,8 +98,8 @@ class CompanyController extends Controller
     public function update(Request $request, Company $company)
     {
         //
-        
-        $companies = Company($company);
+
+        $companies = Company::find($company);
         $this->validate($request,[
             'name'=>'required',
             'email'=>'required',
@@ -115,6 +115,8 @@ class CompanyController extends Controller
         $companies->email = $request->email;
         $companies->logo = $logoname;
         $companies->save();
+
+        return redirect('company');
 
         
     }
