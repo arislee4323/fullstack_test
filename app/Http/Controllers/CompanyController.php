@@ -99,7 +99,7 @@ class CompanyController extends Controller
     {
         //
 
-        $companies = Company::find($company);
+        $companies = Company::find($company->id);
         $this->validate($request,[
             'name'=>'required',
             'email'=>'required',
