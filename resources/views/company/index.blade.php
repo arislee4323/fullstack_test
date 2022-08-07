@@ -60,7 +60,7 @@
                       </div>
                       <div class="form-group">
                         <label>Logo</label>
-                        <input type="file" name="logo" :value="data.logo" class="form-control">
+                        <input type="file" name="file" :value="data.file" class="form-control" required="">
                       </div>
                 </div>
                 <div class="modal-footer justify-content-between">

@@ -52,9 +52,9 @@ class CompanyController extends Controller
             
         ]);
 
-        $logo = $request->logo;
+        $logo = $request->file;
         $logoname= time().'.'.$logo->getClientOriginalExtension();
-        $request->logo->move('storage/app/public',$logoname);
+        $request->file->move('storage/app/public',$logoname);
 
        
         $company = new Company();
@@ -106,9 +106,9 @@ class CompanyController extends Controller
             
         ]);
 
-        $logo = $request->logo;
+        $logo = $request->file;
         $logoname= time().'.'.$logo->getClientOriginalExtension();
-        $request->logo->move('storage/app/public',$logoname);
+        $request->file->move('storage/app/public',$logoname);
 
         
         $companies->name = $request->name;
